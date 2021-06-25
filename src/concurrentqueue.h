@@ -28,8 +28,9 @@
 // EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // Also dual-licensed under the Boost Software License (see LICENSE.md)
-
+#if __x86_64__ || __ppc64__
 void* operator new(unsigned long, void*) throw();
+#endif
 
 #pragma once
 #include <new>
